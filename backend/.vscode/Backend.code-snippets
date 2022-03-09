@@ -1,0 +1,141 @@
+{
+	"Service": {
+		"prefix": "create-service",
+		"body": [
+			"import { ServiceMethods, Params, Id, NullableId } from \"@feathersjs/feathers\"",
+			"",
+			"class ${0:$TM_FILENAME_BASE}Service implements ServiceMethods<any> {",
+			"\tasync find(params: Params) {",
+			"\t\treturn []",
+			"\t}",
+			"\t",
+			"\tasync get(id: Id, params: Params) { ",
+			"",
+			"\t}",
+			"\t",
+			"\tasync create(data: any, params: Params) { ",
+			"",
+			"\t}",
+			"\t",
+			"\tasync update(id: NullableId, data: any, params: Params) { ",
+			"",
+			"\t}",
+			"\t",
+			"\tasync patch(id: NullableId, data: any, params: Params) { ",
+			"",
+			"\t}",
+			"\t",
+			"\tasync remove(id: NullableId, params: Params) { ",
+			"",
+			"\t}",
+			"}",
+			"",
+			"export default ${0:$TM_FILENAME_BASE}Service"
+		],
+		"description": ""
+	},
+
+	"Regular Module": {
+		"scope": "typescript",
+		"prefix": "regular-module",
+		"body": [
+			"function ${1:$TM_FILENAME_BASE}($2) {",
+			"\t$0",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"Schema": {
+		"scope": "typescript",
+		"prefix": "schema_snippet",
+		"body": [
+			"import { model, Schema } from 'mongoose'",
+			"",
+			"const ${1:$TM_FILENAME_BASE}Schema = new Schema({",
+			"\t$0",
+			"}, { timestamps: true })",
+			"",
+			"const ${1:$TM_FILENAME_BASE}Manager = model('${1:$TM_FILENAME_BASE}', ${1:$TM_FILENAME_BASE}Schema)",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}Manager"
+		]
+	},
+
+	"Try-Catch": {
+		"scope": "typescript, javascript",
+		"prefix": "try-catch",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (err) {",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"Try-Catch-Log": {
+		"scope": "typescript, javascript",
+		"prefix": "try-catch-log",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (err) {",
+			"\tconsole.log('ERROR')",
+			"\tconsole.log(err)",
+			"\tconsole.log()",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"Log": {
+		"scope": "typescript, javascript",
+		"prefix": "log",
+		"body": "console.log($0)"
+	},
+
+	"Log-Block": {
+		"scope": "typescript, javascript",
+		"prefix": "log-block",
+		"body": [
+			"console.log()",
+			"console.log($0)",
+			"console.log()"
+		]
+	},
+
+	"Timestamp": {
+		"scope": "typescript, javascript",
+		"prefix": "timestamp-snippet",
+		"body": [
+			"const _timestamp = timestamp(true)"
+		]
+	},
+
+	"Service-Func-Body": {
+		"scope": "typescript, javascript",
+		"prefix": "service-func-body",
+		"body": [
+			"const _timestamp = timestamp(true)",
+			"console.log()",
+			"console.log(`$1 at \\${_timestamp\\}`)",
+			"console.log()",
+			"try {",
+			"\t$0",
+			"} catch (err) {",
+			"\tconsole.log('ERROR')",
+			"\tconsole.log(err)",
+			"\tconsole.log()",
+			"\treturn 'error'",
+			"}"
+		]
+	},
+
+	"Comment": {
+		"scope": "typescript, javascript",
+		"prefix": "comment",
+		"body": "/* $0 */"
+	}
+}

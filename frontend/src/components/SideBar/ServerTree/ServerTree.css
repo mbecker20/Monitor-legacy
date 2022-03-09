@@ -1,0 +1,29 @@
+.TreeContainer {
+  display: flex;
+  flex-direction: column;
+
+  max-height: fit-content; 
+  background-color: var(--gray3); 
+  border-radius: 0.2rem; 
+}
+
+.ServerTree {
+  color: white;
+  background-color: var(--gray3);
+  border-radius: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.Server {
+  font-size: 1.15rem;
+  padding: 0.25rem;
+}
+
+.Deployment {
+  font-size: 1rem;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

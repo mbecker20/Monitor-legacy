@@ -1,0 +1,27 @@
+.App {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  row-gap: 1rem;
+  box-sizing: border-box;
+  
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+    "topbar topbar"
+    "sidebar main";
+}
+
+:root {
+  --gray1: #182026;
+  --gray2: #202B33;
+  --gray3: #293742;
+  --gray4: #30404D;
+  --gray5: #394B59;
+  --running: #43BF4D;
+  --stopped: #D13913;
+  --not-created: #4580E6;
+  --no-deploy: #A854A8;
+  --child-stopped: #F2B824;
+  --error-update: #FF7373;
+}

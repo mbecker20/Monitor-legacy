@@ -1,0 +1,40 @@
+.Actions {
+  background-color: var(--gray3);
+  border-radius: 0.2rem;
+  
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  grid-area: 'actions';
+}
+
+.ActionsHeader {
+  font-size: 1.35rem;
+  color: white;
+  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+}
+
+.ActionsBody {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.Action {
+  background-color: var(--gray4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.ActionTitle {
+  font-size: 1.15rem;
+  color: white;
+}
+
+.Button {
+  color: white;
+}

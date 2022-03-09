@@ -1,0 +1,66 @@
+.TopBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--gray2);
+  grid-area: topbar;
+  border-radius: 0.2rem;
+}
+
+.TopBarLogo:hover {
+  cursor: pointer;
+}
+
+.TopBarHeader {
+  display: flex;
+  margin: 1rem 1rem 1rem 0rem;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.TopBarLogo {
+  height: 2.5rem;
+}
+
+.TopBarTitle {
+  color: white;
+  font-size: 2rem;
+}
+
+.TopBarIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.UpdatesViewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 80%;
+}
+
+.UpdatesContent {
+  padding: 1rem;
+}
+
+.LogoutPopover {
+  margin-right: 0.5rem;
+}
+
+.UpdatesPopover {
+  margin-right: 1rem;
+}
+
+.UpdatesPopoverBG {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  /* backdrop-filter: blur(2px); */
+}

@@ -1,0 +1,17 @@
+{
+	"component": {
+		"prefix": "comp",
+		"body": [
+			"import React from \"react\";",
+			"import { Text } from \"ink\";",
+			"",
+			"const ${1:$TM_FILENAME_BASE} = (p: {}) => {",
+			"\treturn (",
+			"\t\t<Text></Text>",
+			"\t);",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE};"
+		]
+	}
+}

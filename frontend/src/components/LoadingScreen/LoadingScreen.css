@@ -1,0 +1,13 @@
+.LoadingScreen {
+  position: fixed;
+  width: 100vw;
+  height: 300vh;
+  background-color: black;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoadingLogo {
+  height: 60vh;
+}

@@ -1,0 +1,76 @@
+.ServerMainLayout {
+  display: grid;
+  margin: 0.5rem;
+  height: 100%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+}
+
+.ServerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray3);
+  padding: 0.75rem;
+  border-radius: 0.2rem;
+  grid-area: title;
+}
+
+.ServerTitle{
+  color: white;
+  font-size: 1.5rem;;
+}
+
+.ServerIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.GridLeftContainer{
+  display: flex;
+  flex-direction: column;
+  height: 87.5vh;
+  overflow-y: hidden;
+  margin-right: 0.5rem;
+  grid-area: left;
+}
+
+.GridLeftContent {
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.GridLeftContentLogless {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.StackLayoutRight {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.InnerCard {
+  background-color: var(--gray3);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.InnerCardHeader {
+  font-size: 1.35rem;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+}

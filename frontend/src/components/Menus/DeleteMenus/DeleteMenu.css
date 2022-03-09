@@ -1,0 +1,13 @@
+.ConfigItem {
+  padding: 1rem;
+  background-color: var(--gray4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+}
+
+.ConfigTextInput {
+  width: 100%;
+}

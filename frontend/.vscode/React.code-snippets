@@ -1,0 +1,271 @@
+{
+	"component": {
+		"scope": "typescriptreact,javascriptreact",
+		"prefix": "comp",
+		"body": [
+			"function ${0:$TM_FILENAME_BASE}() {",
+			"\treturn (",
+			"\t\t<div>",
+			"",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"",
+			"export default ${0:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"component with Props": {
+		"scope": "typescriptreact",
+		"prefix": "comp-props",
+		"body": [
+			"interface Props {",
+			"\t$0",
+			"}",
+			"",
+			"function ${1:$TM_FILENAME_BASE}({  }: Props) {",
+			"\treturn (",
+			"\t\t<div>",
+			"",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"component with jss": {
+		"scope": "typescriptreact",
+		"prefix": "comp-jss",
+		"body": [
+			"import useJSS from './style'",
+			"",
+			"function ${0:$TM_FILENAME_BASE}() {",
+			"\tconst classes = useJSS()",
+			"\treturn (",
+			"\t\t<div>",
+			"",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"",
+			"export default ${0:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"component with Props, jss": {
+		"scope": "typescriptreact",
+		"prefix": "comp-props-jss",
+		"body": [
+			"import React from 'react'",
+			"import useJSS from './style'",
+			"",
+			"interface Props {",
+			"\t$0",
+			"}",
+			"",
+			"function ${1:$TM_FILENAME_BASE}({  }: Props) {",
+			"\tconst classes = useJSS()",
+			"\treturn (",
+			"\t\t<div>",
+			"",
+			"\t\t</div>",
+			"\t)",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"useJSS": {
+		"scope": "typescript,javascript",
+		"prefix": "useJSS",
+		"body": [
+			"import { createUseStyles } from 'react-jss'",
+			"",
+			"const useJSS = createUseStyles({",
+			"\t${1:Class}: {",
+			"\t\t$0",
+			"\t},",
+			"})",
+			"",
+			"export default useJSS"
+		]
+	},
+
+	"Extend Window": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "declare-global, extend-window",
+		"body": [
+			"declare global {",
+			"\tinterface Window {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Button": {
+		"scope": "typescriptreact",
+		"prefix": "<Button",
+		"body": [
+			"<Button",
+			"\tonClick={() => {",
+			"\t\t$1",
+			"\t}}",
+			">",
+			"\t$0",
+			"</Button>"
+		]
+	},
+
+	"OpenState": {
+		"scope": "typescriptreact",
+		"prefix": "open-state",
+		"body": [
+			"const [isOpen, setOpen] = useState(false)"
+		]
+	},
+
+	"ForLoop": {
+		"scope": "typescriptreact, typescript",
+		"prefix": "for-loop",
+		"body": [
+			"for (let ${1:i} = ${2:0}; $1 < $3; $1++) {",
+			"\t$0",
+			"}"
+		]
+	},
+
+	"CSSTypeImport": {
+		"scope": "typescriptreact, typescript",
+		"prefix": "csstype-import",
+		"body": [
+			"import CSS from 'csstype'"
+		]
+	},
+
+	"UseErrorReport": {
+		"scope": "typescriptreact, typescript",
+		"prefix": "use-error-report",
+		"body": [
+			"const { erControlData, openErrorReport, closeErrorReport, setErrorString } = useErrorReport()"
+		]
+	},
+
+	"Regular Module": {
+		"scope": "typescript",
+		"prefix": "regular-module",
+		"body": [
+			"function ${1:$TM_FILENAME_BASE}($2) {",
+			"\t$0",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"Center-Menu-Items": {
+		"prefix": "Center-Menu-Items",
+		"body": [
+			"import React, { Fragment } from 'react'",
+			"import { useEscapeToClose } from 'kbin-ui'",
+			"import { closeCenterMenu } from '../../../main'",
+			"",
+			"interface Props {",
+			"\t$2",
+			"}",
+			"",
+			"function ${1:$TM_FILENAME_BASE}({ $3 }: Props) {",
+			"\tuseEscapeToClose(closeCenterMenu)",
+			"\treturn (",
+			"\t\t<Fragment>",
+			"\t\t\t$0",
+			"\t\t</Fragment>",
+			"\t)",
+			"}",
+			"",
+			"export default ${1:$TM_FILENAME_BASE}"
+		]
+	},
+
+	"IfElse": {
+		"prefix": "<IfElse",
+		"body": [
+			"<IfElse",
+			"\tshowIf={$1}",
+			"\tshow={",
+			"\t\t<Fragment>",
+			"\t\t\t$2",
+			"\t\t</Fragment>",
+			"\t}",
+			"\tshowElse={",
+			"\t\t<Fragment>",
+			"\t\t\t$0",
+			"\t\t</Fragment>",
+			"\t}",
+			"/>"
+		]
+	},
+
+	"Map": {
+		"prefix": "<Map",
+		"body": [
+			"<Map",
+			"\tarray={$1}",
+			"\tmap={($2) => (",
+			"\t\t$0",
+			"\t)}",
+			"/>"
+		]
+	},
+
+	"Action": {
+		"prefix": "action-snippet",
+		"body": [
+			"export function $1($4): $2 {",
+			"\treturn {",
+			"\t\ttype: $3,",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Thunk": {
+		"prefix": "thunk-snippet",
+		"body": [
+			"export function $1($2) {",
+			"\treturn async (dispatch: Dispatch) => {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		]
+	},
+
+	"State-Selector": {
+		"prefix": "state-selector",
+		"body": [
+			"const { $0 } = useSelector(state => state)"
+		]
+	},
+
+	"<SVGIcon": {
+		"prefix": "<SVGIcon",
+		"body": [
+			"<SVGIcon",
+			"\tsrc='/svg/$1.svg'",
+			"\talt='$2'",
+			"\ttitle='$2'",
+			"\twidth='$0'",
+			"/>"
+		]
+	},
+
+	"Fancy-Comment": {
+		"prefix": "comment-fancy",
+		"body": [
+			"/* $0 */"
+		]
+	}
+}

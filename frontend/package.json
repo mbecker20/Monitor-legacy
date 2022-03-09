@@ -1,0 +1,59 @@
+{
+  "name": "frontend-stripped",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@blueprintjs/core": "^3.44.0",
+    "@blueprintjs/icons": "^3.26.0",
+    "@blueprintjs/popover2": "^0.7.1",
+    "@blueprintjs/select": "^3.16.1",
+    "@feathersjs/authentication-client": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/rest-client": "^4.5.11",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "kbin-router": "1.2.3",
+    "kbin-state": "1.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-spring": "^9.1.2",
+    "shallow-equal": "^1.2.1",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "install": "yarn install",
+    "start": "react-scripts start",
+    "build-copy-push": "yarn run pull-deployment-repo && yarn run build && yarn run copy && yarn run push",
+    "pull-deployment-repo": "cd ../../../monitor-frontend-deployment && git pull",
+    "build": "react-scripts build",
+    "copy": "rm -r ../../../monitor-frontend-deployment/deploy && cp -a build/. ../../../monitor-frontend-deployment/deploy/",
+    "push": "cd ../../../monitor-frontend-deployment && git add . && git commit -m \"update\" && git push origin",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

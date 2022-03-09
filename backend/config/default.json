@@ -1,0 +1,39 @@
+{
+  "host": "HOST",
+  "port": "PORT",
+  "public": "/rootDir/builds/Monitor_Frontend/deploy",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "lXUkqi9JDMk+mQvCEw3ICkPEcLc=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://monitor.mogh.tech",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "7d"
+    },
+    "local": {
+      "usernameField": "username",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "/",
+      "github": {
+        "key": "ccd3f7268211ac295f56",
+        "secret": "90f3c1290fc3c2f33e5ff3230f5f328ace5c1b40"
+      }
+    }
+  },
+  "mongodb": "MONGO_URL"
+}

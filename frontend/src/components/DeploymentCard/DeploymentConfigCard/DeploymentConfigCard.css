@@ -1,0 +1,35 @@
+.ConfigCardLayout {
+  grid-area: 'config' ;
+}
+
+.ConfigHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ConfigCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray4);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.ConfigCardBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.25rem;
+}
+
+.ConfigInputTitle {
+  font-size: 1.05rem;
+  color: white;
+}
+
+.ConfigInput {
+  font-size: 1rem;
+  color: white;
+}

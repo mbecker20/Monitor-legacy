@@ -1,0 +1,29 @@
+.GlobalUpdatesContainer {
+  background-color: var(--gray5);
+}
+
+.UpdateCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "name name "
+  "operation timestamp "
+  "operator buttons ";
+  gap: 0.5rem;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  background-color: var(--gray3);
+  border-radius: 0.2rem;
+  z-index: 10;
+}
+
+.GUItem {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
