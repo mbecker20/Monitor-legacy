@@ -1,5 +1,5 @@
 import { dockerode } from "../main"
-import { DEPLOYDATA_ROOT, REGISTRY_URL, REGISTRY_URL_EXT, REPO_PATH, SERVER_CHECK_TIMEOUT, SYSROOT, SYSTEM_SERVER_NAME } from "../const"
+import { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DEPLOYDATA_ROOT, REGISTRY_URL, REGISTRY_URL_EXT, REPO_PATH, SERVER_CHECK_TIMEOUT, SYSROOT, SYSTEM_SERVER_NAME } from "../const"
 import ServersManager from "../schema/Servers"
 import { getDeployment, objFrom2Arrays, toContainerName } from "./general"
 import { execute } from "./execute"
@@ -39,7 +39,7 @@ function envString(environment?: EnvironmentVar[]) {
 
 function logString(containerName: string, logToAWS?: boolean) {
   if (logToAWS) {
-    return ` -e "AWS_ACCESS_KEY_ID=AKIAR325GWW7ALQXPQX6" -e "AWS_SECRET_ACCESS_KEY=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" --log-driver=awslogs --log-opt awslogs-region=us-east-1 --log-opt awslogs-group=myLogGroup --log-opt awslogs-create-group=true --log-opt awslogs-stream=${containerName}`
+    return ` -e "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" -e "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" --log-driver=awslogs --log-opt awslogs-region=us-east-1 --log-opt awslogs-group=myLogGroup --log-opt awslogs-create-group=true --log-opt awslogs-stream=${containerName}`
   } else {
     return ''
   }

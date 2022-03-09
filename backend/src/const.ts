@@ -10,6 +10,9 @@ export const MONGO_URL = process.env.MONGO_URL!
 
 export const GH_ACCESS_TOKEN = process.env.GH_ACCESS_TOKEN!
 
+export const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID!
+export const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY!
+
 export const UPDATE_LIMIT = 10
 
 export const SYSTEM_NAME = IS_DEV ? 'Monitor Dev' : 'Monitor'
