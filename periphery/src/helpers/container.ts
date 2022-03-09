@@ -1,8 +1,9 @@
 import { dockerode } from "../main";
+import { execute } from "./execute";
 import { objFrom2Arrays } from "./general";
 
 export async function allContainerStatus() {
-	const statusAr = await dockerode.listContainers({ all: true });
+  const statusAr = await dockerode.listContainers({ all: true });
   const statusNames = statusAr.map((stat) =>
     stat.Names[0].slice(1, stat.Names[0].length)
   ); // they all start with '/'
@@ -17,7 +18,7 @@ export async function allContainerStatus() {
 }
 
 export async function getContainerStatus(name: string) {
-	const status = (await dockerode.listContainers({ all: true })).filter(
+  const status = (await dockerode.listContainers({ all: true })).filter(
     ({ Names }) => Names[0] === "/" + name
   );
   return status[0]
@@ -27,4 +28,17 @@ export async function getContainerStatus(name: string) {
         name,
       }
     : "not created";
+}
+
+export async function getContainerLog(
+  containerName: string,
+  logTail?: number
+) {
+  return (
+    await execute(
+      `docker logs ${containerName}${
+        logTail ? ` --tail ${logTail}` : ""
+      }`
+    )
+  ).log;
 }
