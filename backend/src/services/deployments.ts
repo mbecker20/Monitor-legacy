@@ -217,7 +217,7 @@ export async function stopContainer(deploymentID: string, username: string, perm
   if (permissions >= 1) {
     try {
       const { deployment, server } = await getDeploymentAndServer(deploymentID)
-      const stopCommand = `docker stop ${toContainerName(deployment.name)}`
+      const stopCommand = `docker stop ${deployment.containerName}`
       const { log, success } = await execute(stopCommand, server)
       addDeploymentUpdate(
         deployment._id, STOP_CONTAINER, stopCommand, log, username, note, !success

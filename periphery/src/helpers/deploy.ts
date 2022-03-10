@@ -1,9 +1,24 @@
 import { DEPLOYDATA_ROOT, REGISTRY_URL, SYSROOT } from "../config";
 import { execute } from "./execute";
 
+export async function stopContainer(containerName: string) {
+  const command = `docker stop ${containerName}`;
+  return await execute(command);
+}
+
+export async function startContainer(containerName: string) {
+  const command = `docker start ${containerName}`;
+  return await execute(command);
+}
+
+export async function deleteContainer(containerName: string) {
+  const command = `docker stop ${containerName} && docker container rm ${containerName}`;
+  return await execute(command);
+}
+
 export async function deployContainer(deployment: Deployment, build?: Build) {
 	const command = createDockerRun(deployment, build);
-	return { command, ...(await execute(command)) };
+	return await execute(command);
 }
 
 function createDockerRun(

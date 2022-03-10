@@ -7,11 +7,13 @@ export async function execute(command: string) {
   try {
     return {
       log: await pExec(command),
+      command,
       success: true,
     };
   } catch (err) {
     return {
       log: { stderr: JSON.stringify(err), stdout: "" },
+      command,
       success: false,
     };
   }
